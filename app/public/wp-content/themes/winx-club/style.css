@@ -1,0 +1,434 @@
+/*
+Theme Name: Winx Club
+Author: Fleur
+Description: Een magisch fan-thema over de tv serie Winx Club. Gemaakt voor de module WordPress Custom 1.
+Version: 1.0
+Text Domain: winx-club
+*/
+
+/* ===== Kleuren en basis ===== */
+:root {
+    --roze: #ff5fb7;
+    --paars: #8a3ffc;
+    --donkerpaars: #2b0f4d;
+    --lichtroze: #ffe6f5;
+    --goud: #ffd23f;
+    --tekst: #3a2350;
+    --wit: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito', Arial, sans-serif;
+    color: var(--tekst);
+    background: linear-gradient(180deg, #fff5fb 0%, #f3e9ff 100%);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Fredoka', 'Nunito', sans-serif;
+    color: var(--paars);
+    line-height: 1.2;
+}
+
+a {
+    color: var(--roze);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container.smal {
+    max-width: 780px;
+}
+
+main {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+/* ===== Knoppen ===== */
+.knop {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(90deg, var(--roze), var(--paars));
+    color: var(--wit);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(138, 63, 252, 0.35);
+    transition: transform 0.2s;
+}
+
+.knop:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== Header ===== */
+.site-header {
+    background: var(--donkerpaars);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-inhoud {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--wit);
+    text-decoration: none;
+}
+
+.logo img {
+    display: block;
+    height: 50px;
+    width: auto;
+}
+
+.hoofdmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.hoofdmenu a {
+    color: var(--wit);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hoofdmenu a:hover,
+.hoofdmenu .current-menu-item a {
+    color: var(--roze);
+}
+
+.menu-knop {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--wit);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ===== Hero (homepage) ===== */
+.hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: var(--wit);
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--paars), var(--donkerpaars));
+}
+
+.hero h1 {
+    color: var(--wit);
+    font-size: 56px;
+    margin: 10px 0;
+    text-shadow: 0 0 20px rgba(255, 95, 183, 0.8);
+}
+
+.hero-klein {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--goud);
+    margin: 0;
+}
+
+.hero-tekst {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* ===== Feeën blok ===== */
+.feeen {
+    padding: 50px 0 20px;
+    text-align: center;
+}
+
+.feeen-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.fee {
+    background: var(--wit);
+    border-radius: 20px;
+    padding: 20px 10px;
+    border-top: 6px solid var(--roze);
+    box-shadow: 0 5px 15px rgba(43, 15, 77, 0.08);
+    display: block;
+    color: var(--tekst);
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.fee:hover {
+    transform: translateY(-5px);
+}
+
+.fee .lees-meer {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--roze);
+}
+
+.fee img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.fee h3 {
+    margin: 8px 0 4px;
+}
+
+.fee p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* elke fee haar eigen kleur */
+.fee-bloom { border-color: #ff6b3d; }
+.fee-stella { border-color: #ffc62a; }
+.fee-flora { border-color: #ff8fc8; }
+.fee-musa { border-color: #e0245e; }
+.fee-tecna { border-color: #8a3ffc; }
+.fee-aisha { border-color: #22c39a; }
+
+/* ===== Berichten kaarten ===== */
+.pagina-titel {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.label {
+    margin: 0;
+    color: var(--roze);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.kaarten {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.kaart {
+    background: var(--wit);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(43, 15, 77, 0.1);
+    transition: transform 0.2s;
+}
+
+.kaart:hover {
+    transform: translateY(-5px);
+}
+
+.kaart img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.kaart-inhoud {
+    padding: 20px;
+}
+
+.kaart h2,
+.kaart h3 {
+    font-size: 22px;
+    margin: 5px 0 10px;
+}
+
+.kaart h2 a,
+.kaart h3 a {
+    color: var(--paars);
+    text-decoration: none;
+}
+
+.meta {
+    font-size: 14px;
+    color: #9a7fb5;
+    margin: 0;
+}
+
+.lees-meer {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* ===== Enkel bericht en pagina ===== */
+.bericht h1,
+.pagina h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+.uitgelicht img {
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.inhoud {
+    font-size: 18px;
+}
+
+/* foto van de fee op haar eigen pagina */
+.fee-foto {
+    background: var(--lichtroze);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.fee-foto img {
+    max-height: 400px;
+    width: auto;
+}
+
+.tags a {
+    display: inline-block;
+    background: var(--lichtroze);
+    padding: 4px 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    margin: 3px;
+    font-size: 14px;
+}
+
+/* ===== 404 ===== */
+.niet-gevonden {
+    text-align: center;
+}
+
+.groot-getal {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 140px;
+    margin: 0;
+    background: linear-gradient(90deg, var(--roze), var(--paars));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    background: var(--donkerpaars);
+    color: #d9c7f0;
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+.site-footer h3 {
+    color: var(--goud);
+}
+
+.footer-widgets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.site-footer a {
+    color: var(--wit);
+}
+
+.footermenu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.magie-tekst {
+    background: var(--donkerpaars);
+    color: var(--roze);
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .kaarten {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feeen-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .menu-knop {
+        display: block;
+    }
+
+    .hoofdmenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--donkerpaars);
+        padding: 20px;
+    }
+
+    .hoofdmenu.open {
+        display: block;
+    }
+
+    .hoofdmenu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .kaarten,
+    .footer-widgets {
+        grid-template-columns: 1fr;
+    }
+
+    .feeen-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
